@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --background: rgba(16, 16, 16, 0.44);
+    --rojo: #B30A0A;
+    --fondo:#151515
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+body{
+    margin: 0;
+    padding: 0;
+    background-color: var(--fondo);
+}

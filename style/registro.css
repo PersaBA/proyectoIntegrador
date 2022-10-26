@@ -1,0 +1,295 @@
+h1,
+h2,
+h3,
+h5 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 15px;
+}
+
+h5 {
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+form {
+    margin: auto;
+    width: 250px;
+}
+
+label {
+    text-align: left;
+}
+
+label>input {
+    margin: 0 auto;
+    background-color: unset;
+    width: 250px;
+    height: 30px;
+    border: 2px solid var(--rojo);
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+label>input:active,
+label>input:focus {
+    outline: none;
+}
+
+.contenedorTexto {
+    background-color: rgba(16, 16, 16, 0.693);
+    height: 50vh;
+    overflow: auto;
+    text-align: justify;
+    padding: 0px 15px;
+}
+
+.aceptar {
+    display: flex;
+    justify-content: center;
+}
+
+#active {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+header {
+    background-color: var(--background);
+    height: 90vh;
+    width: 275px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+    border-radius: 10px;
+}
+
+header>.volver {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: var(--rojo);
+    cursor: pointer;
+
+}
+
+header>ul {
+    height: 70vh;
+    width: 90%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+header>ul>.navLink {
+    border-radius: 10px;
+    color: rgba(209, 209, 209, 0.6);
+    padding: 20px 0px;
+    background-color: var(--background);
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+main {
+    background-color: var(--background);
+    width: 60%;
+    height: 90vh;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: var(--rojo);
+    display: block;
+    width: 150px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.general {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    height: 60vh;
+    margin-top: 20px;
+}
+
+.general>li {
+    list-style: none;
+    width: 30%;
+    height: 100%;
+    background-color: rgb(8, 8, 8);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative
+}
+
+/* card */
+.general>li>.headerCard {
+    padding: 10px 0px;
+}
+
+.general>li>.listCard {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.general>li>.listCard>ul {
+    padding: 0;
+    height: 70%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.general>li>.listCard>ul>li {
+    list-style: none;
+}
+
+
+/* .general>li>.priceCard{
+} */
+.general>li>.priceCard>h2 {
+    font-size: 30px;
+    font-weight: 100;
+}
+
+.general>li>.priceCard>h2>span {
+    font-size: 15px;
+    position: absolute;
+}
+
+.general>li>a>.buttonCard {
+    position: absolute;
+    bottom: 0px;
+    left: auto;
+    background-color: var(--rojo);
+    width: 100%;
+    padding: 20px 0px;
+}
+
+.general>li>a>.buttonCard:hover {
+    background-color: var(--background);
+    transition: .5s;
+}
+
+
+/* Fin card Eleccion Plan */
+@media screen and (max-width:1000px) {
+header{
+    display: none;
+}
+main{
+    width: 90%;
+}
+}
+
+@media screen and (max-width:550px) {
+    header {
+        display: none;
+    }
+
+    main {
+        width: 100%;
+        height: 100vh;
+        font-size: 15px;
+    }
+
+    .general {
+        display: grid;
+        width: 100%;
+        justify-content: center;
+        height: 80vh;
+        align-content: space-evenly;
+    }
+
+    .container{
+        height: 90vh;
+    }
+    .general>li {
+        width: 80vw;
+        display: grid;
+        grid-template-areas: "headerCard headerCard  priceCard"
+            "listCard listCard buttonCard";
+        height: 20vh;
+        
+    }
+
+    .general>li>.listCard {
+        grid-area: listCard;
+        height: 100%;
+    }
+
+    .general>li>.headerCard {
+        grid-area: headerCard;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 40px;
+        width: 100%;
+    }
+
+    .general>li>.priceCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-area: priceCard;
+        width: 100%;
+    }
+
+    .general>li>a {
+        grid-area: buttonCard;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .general>li>a>.buttonCard {
+        height: 40%;
+        border-radius: 10px;
+        width: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: unset;
+        bottom: unset;
+    }
+
+    .general>li>.listCard>ul{
+        padding-left: 10px;
+        align-items: start;
+    }
+
+}

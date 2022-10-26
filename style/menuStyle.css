@@ -1,0 +1,77 @@
+.menu{
+    position: absolute;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.85);
+    height: 100vh;
+    width: 30%;
+    left: -100%;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+}
+
+#Omenu{
+  top: 20px;
+  left: 20px;
+  position: fixed;
+}
+
+.menuIcon{
+    height: 40px;
+    background-color: var(--rojo);
+    border-radius: 8px;
+    width: 40px;
+    cursor: pointer;
+
+}
+
+.menuIcon:hover{
+    background-color: #4b0000;
+    transition: .5s;
+}
+
+.menu > .menuContainer{
+    position: relative;
+    text-align: center;
+    height: 100%;
+}
+
+.menu > .menuContainer > #CMenu > .menuIcon{
+    position: absolute;
+    right:20px;
+    top: 20px;
+     
+}
+
+.menu > .menuContainer> .img {
+    background-color: rgb(44, 44, 44);
+    height: 100px;
+    width: 100px;
+    margin: 0 auto;
+    border-radius: 150px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu > .menuContainer> .img > img{
+    width: 100%;
+    height: auto;
+}
+
+.menu> .menuContainer >h1{
+    height: 10vh;
+}
+
+.menu> .menuContainer>a>.Cerrar{
+    position: absolute;
+    background-color: var(--rojo);
+    width: 100%;
+    height: 70px;
+    bottom: 0px;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
